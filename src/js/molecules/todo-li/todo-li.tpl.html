@@ -1,0 +1,56 @@
+<li class="list-group-item bg-secondary" style="line-height: 38px">
+    <div class="row">
+        <span class="col cursor-pointer" ng-click="completeTodo()">
+            <i 
+                class="fa fa-lg"
+                aria-hidden="true"
+                ng-class="{
+                    'fa-spinner fa-pulse': loading,
+                    'fa-square-o': !todo.completed && !loading,
+                    'fa-check-square': todo.completed && !loading
+                }"
+            ></i>
+            {{todo.title}}
+        </span>
+        <button 
+            type="button"
+            class="col-md-auto d-none d-md-block btn btn-outline-light float-right"
+            ng-click="toggleExpandCard()"
+        >
+            <i class="fa" aria-hidden="true" ng-class="{'fa-chevron-down': !expanded, 'fa-chevron-up': expanded}"></i>
+        </button>
+    </div>
+    <div class="row mt-2" ng-show="expanded">
+        <div class="col-12 col-md-7" ng-bind="todo.description"></div>
+        <div class="col-8 col-md-3" ng-show="todo.expiration">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            {{todo.expiration | date:'dd/MM/yy H:mm'}}
+        </div>
+        <div 
+            class="col-4 col-md-2 text-right"
+            ng-class="{'offset-md-3': !todo.expiration, 'offset-8': !todo.expiration}"
+        >
+            <i 
+                class="fa fa-lg pr-2 cursor-pointer"
+                ng-class="{'fa-pencil': !loading, 'fa-spinner fa-pulse': loading}"
+                aria-hidden="true"
+                ng-click="editTodo()"
+            ></i>
+            <i 
+                class="fa fa-lg cursor-pointer"
+                ng-class="{'fa-trash-o': !loading, 'fa-spinner fa-pulse': loading}"
+                aria-hidden="true"
+                ng-click="deleteTodo()"
+            ></i>
+        </div>
+    </div>
+    <div class="row">
+        <button 
+            type="button"
+            class="col-12 d-md-none btn btn-outline-light float-right"
+            ng-click="toggleExpandCard()"
+        >
+            <i class="fa" aria-hidden="true" ng-class="{'fa-chevron-down': !expanded, 'fa-chevron-up': expanded}"></i>
+        </button>
+    </div>
+</li>

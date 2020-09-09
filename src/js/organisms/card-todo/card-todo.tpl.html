@@ -1,0 +1,11 @@
+<div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+        <h5 class="card-title" ng-bind="title"></h5>
+        <p class="card-text" ng-if="todoList.length == 0">
+            No tenes ninguna tarea asignada.
+        </p>
+        <ul class="list-group list-group-flush" ng-if="todoList.length > 0">
+            <todo-li todo="todo" ng-repeat="todo in todoList"></todo-li>
+        </ul>
+    </div>
+</div>

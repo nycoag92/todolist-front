@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="todoListApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>To-Do App</title>
+
+        <link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="stylesheets/css/main.css">
+
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/angular-touch/angular-touch.min.js"></script>
+        <script src="node_modules/ui-bootstrap4/dist/ui-bootstrap.js"></script>
+        <script src="node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+
+        <script src="js/app/app.js"></script>
+        <script src="js/app/app.config.js"></script>
+        <script src="js/app/app.route.js"></script>
+        
+        <script src="js/factories/todo.fct.js"></script>
+
+        <script src="js/molecules/todo-li/todo-li.ctrl.js"></script>
+
+        <script src="js/organisms/addTodoModal/addTodoModal.ctrl.js"></script>
+        <script src="js/organisms/card-todo/card-todo.ctrl.js"></script>
+        <script src="js/organisms/completeTodoModal/completeTodoModal.ctrl.js"></script>
+        <script src="js/organisms/deleteTodoModal/deleteTodoModal.ctrl.js"></script>
+        <script src="js/organisms/footer/footer.ctrl.js"></script>
+        <script src="js/organisms/header/header.ctrl.js"></script>
+        
+        <script src="js/pages/todo-list/todo-list.ctrl.js"></script>
+
+    </head>
+    <body class="bg-light">
+        <header class="w-100"></header>
+        <div class="container-fluid" data-ng-view></div>
+        <footer></footer>
+    </body>
+</html>

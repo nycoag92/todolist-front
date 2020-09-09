@@ -1,0 +1,4 @@
+angular.module('todoListApp')
+	.constant('API_ENDPOINT', {
+        URL: '//localhost:8000'
+	});
